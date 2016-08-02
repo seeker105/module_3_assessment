@@ -19,10 +19,7 @@ class BestBuyService
       r.params['show'] = 'longName,phone,storeType,address,city,region,fullPostalCode,hours'
       r.params['format'] = 'json'
     end
-    result = JSON.parse(response.body, symbolize_names: true)[:stores]
-    result[0][:hours_split]=result[0][:hours].split('\; ')
-    byebug
-    return result
+    result = JSON.parse(response.body, symbolize_names: true)[:stores][0]
   end
 
 end

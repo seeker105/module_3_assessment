@@ -11,7 +11,7 @@ RSpec.feature "1st best buy story" do
     # When I click the name of a store
     click_link "Best Buy Mobile - Cherry Creek Shopping Center"
     # Then my current path should be "/stores/:store_id"
-    expect(current_path).to eq("stores/2740")
+    expect(current_path).to eq("/stores/2740")
     # I should see the store name, store type and address with city, state and zip
     expect(page).to have_css(".storeName")
     expect(page).to have_css(".storeType")
