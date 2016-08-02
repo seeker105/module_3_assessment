@@ -1,5 +1,5 @@
 class Api::V1::ItemsController < ApplicationController
-  def index
+  def all
     byebug
     render json: Item.all
   end

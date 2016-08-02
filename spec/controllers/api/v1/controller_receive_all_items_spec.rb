@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::ItemsController do
 
     it 'receives items' do
-      get :index
+      get :all
       byebug
       items = JSON.parse(response.body)
       items.count = 500

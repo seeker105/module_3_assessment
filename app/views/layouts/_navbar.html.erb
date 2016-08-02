@@ -18,6 +18,15 @@
       </li>
       <li>
         <a href="/orders">Orders</a>
+        <%= form_tag best_buy_search_path, method: :post, class: "navbar-form navbar-left search-form" do %>
+          <%= text_field_tag(
+              :search,
+              params[:search],
+              placeholder: "Search",
+              class: "form-control"
+          ) %>
+          <button type='submit'>Search</button>
+        <% end %>
       </li>
     </ul>
   </div>
