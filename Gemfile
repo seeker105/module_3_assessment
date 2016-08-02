@@ -26,5 +26,6 @@ end
 
 group :development, :test do
   gem "minitest-rails-capybara"
-  gem "pry", :require => "pry"
+  # gem "pry", :require => "pry"
+  gem 'byebug'
 end

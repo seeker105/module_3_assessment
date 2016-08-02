@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Consume API" do
-  scenario 'receive all items' do
+RSpec.describe "Api::V1::ItemsController" do
+  describe 'receive all items' do
     response = visit '/api/v1/items'
 
     byebug

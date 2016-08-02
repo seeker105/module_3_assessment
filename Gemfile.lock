@@ -78,6 +78,7 @@ GEM
     arel (5.0.1.20140414130214)
     awesome_print (1.7.0)
     builder (3.2.2)
+    byebug (9.0.5)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -85,7 +86,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    coderay (1.1.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -128,7 +128,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
@@ -153,10 +152,6 @@ GEM
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
     polyglot (0.3.5)
-    pry (0.10.4)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -188,7 +183,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    slop (3.6.0)
     spring (1.7.2)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -224,6 +218,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  byebug
   coffee-rails (~> 4.0.0)
   faker
   faraday
@@ -233,7 +228,6 @@ DEPENDENCIES
   launchy
   less-rails-bootstrap
   minitest-rails-capybara
-  pry
   rails (= 4.1.4)
   rspec-core!
   rspec-expectations!
