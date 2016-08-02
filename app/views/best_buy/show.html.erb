@@ -1,0 +1,11 @@
+ <div class="storeName"><%= @store[:longName] %></div><br />
+ <div class="storeType"><%= @store[:storeType] %></div><br />
+ <div class="address"><%= @store[:address] %></div><br />
+ <div class="city"><%= @store[:city] %></div><br />
+ <div class="state"><%= @store[:region] %></div><br />
+ <div class="zip"><%= @store[:fullPostalCode] %></div><br />
+ <% @store[:hours].split("\; ").each do |hour| %>
+ <div class="hours">
+   <%= hour %>
+ </div><br />
+ <% end %>
