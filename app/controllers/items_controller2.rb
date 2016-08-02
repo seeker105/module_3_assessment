@@ -1,4 +1,4 @@
-class Api::V1::ItemsController < ApplicationController
+class ItemsController < ApplicationController
   def index
     byebug
     render json: Item.all
