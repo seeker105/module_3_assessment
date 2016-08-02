@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
-  post 'search', to: 'best_buy#search', as: :best_buy_search
+  post 'search', to: 'best_buy#index', as: :best_buy_index
+  get 'stores/:store_id', to: 'best_buy#show', as: :best_buy_show
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]

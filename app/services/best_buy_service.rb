@@ -7,6 +7,7 @@ class BestBuyService
       r.params['show'] = 'longName,phone,storeType,distance'
       r.params['pageSize'] = '15'
       r.params['format'] = 'json'
+      r.params['storeId']
     end
     result = JSON.parse(response.body, symbolize_names: true)[:stores]
   end
