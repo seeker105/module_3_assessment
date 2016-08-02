@@ -2,13 +2,14 @@
 
 <% if @stores.count > 0 %>
 <ul>
-  <%= @stores.each do |store| %>
+  <%= @stores.each_with_index do |store, x| %>
   <li>
-    <div class="store">
+    <div class="store" id=<%= "store-#{x}" %>>
     <ul>
-      <li><div class='long-name'>
-        <%= store['longName'] %>
-      </div></li>
+      <li><div class='long-name'><%= store[:longName] %></div></li>
+      <li><div class='distance'><%= store[:distance] %></div></li>
+      <li><div class='phone-number'><%= store[:phone] %></div></li>
+      <li><div class='store-type'><%= store[:storeType] %></div></li>
     </ul>
   </div>
   </li>

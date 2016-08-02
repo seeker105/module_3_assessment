@@ -8,8 +8,7 @@ class BestBuyService
       r.params['pageSize'] = '15'
       r.params['format'] = 'json'
     end
-    result = JSON.parse(response.body, stringify_keys: true)['stores']
-    byebug
+    result = JSON.parse(response.body, symbolize_names: true)[:stores]
   end
 
 end
