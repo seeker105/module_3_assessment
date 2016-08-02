@@ -1,2 +1,18 @@
-<h1>BestBuy#search</h1>
-<p>Find me in app/views/best_buy/search.html.erb</p>
+<h4>17 Total Stores</h4>
+
+<% if @stores.count > 0 %>
+<ul>
+  <%= @stores.each do |store| %>
+  <li>
+    <div class="store">
+    <ul>
+      <li><div class='long-name'>
+        <%= store['longName'] %>
+      </div></li>
+    </ul>
+  </div>
+  </li>
+  <% end %>
+
+</ul>
+<% end %>

@@ -1,18 +1,15 @@
 class BestBuyService
 
-  def initialize
-    @connection = Faraday.new(url: "https://api.bestbuy.com/v1/products")
-  end
-
   def retrieve_stores(zip)
-    conn = Faraday.new(url: "http://api.bestbuy.com/v1/stores")
-    https://api.bestbuy.com/v1/stores((area(80203,25)))?apiKey=&show=longName,phone,storeType&pageSize=15&callback=JSON_CALLBACK&format=json
-
-
-    @connection.get do |r|
-      r.url "%28%28area%2880203,25%29%29%29"
-      r.params['apiKey'] = ENV['best_bu']
+    conn = Faraday.new(url: "http://api.bestbuy.com/v1/stores%28%28area%28#{zip},25%29%29%29")
+    response = conn.get do |r|
+      r.params['apiKey'] = ENV['best_buy_api_key']
+      r.params['show'] = 'longName,phone,storeType,distance'
+      r.params['pageSize'] = '15'
+      r.params['format'] = 'json'
     end
+    result = JSON.parse(response.body, stringify_keys: true)['stores']
+    byebug
   end
 
 end
