@@ -6,7 +6,7 @@ RSpec.describe Api::V1::ItemsController do
       Item.create(name: 'first')
       Item.create(name: 'second')
 
-      get :all
+      get :index
       byebug
       items = JSON.parse(response.body)
       items.count = 2
