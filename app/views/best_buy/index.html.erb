@@ -6,7 +6,7 @@
   <li>
     <div class="store" id=<%= "store-#{x}" %>>
     <ul>
-      <li><div class='long-name'><%= store[:longName] %></div></li>
+      <li><div class='long-name'><%= link_to store[:longName], best_buy_show_path(store_id: store[:storeId]) %></div></li>
       <li><div class='distance'><%= store[:distance] %></div></li>
       <li><div class='phone-number'><%= store[:phone] %></div></li>
       <li><div class='store-type'><%= store[:storeType] %></div></li>
