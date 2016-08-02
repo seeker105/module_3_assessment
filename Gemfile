@@ -16,6 +16,8 @@ gem "less-rails-bootstrap"
 end
 gem 'figaro'
 gem 'faraday'
+gem 'launchy'
+gem 'simplecov'
 
 group :development do
   gem "spring"
