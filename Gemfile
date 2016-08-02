@@ -18,6 +18,7 @@ gem 'figaro'
 gem 'faraday'
 gem 'launchy'
 gem 'simplecov'
+gem 'awesome_print'
 
 group :development do
   gem "spring"
