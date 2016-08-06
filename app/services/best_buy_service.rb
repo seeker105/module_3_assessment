@@ -20,6 +20,8 @@ class BestBuyService
       r.params['format'] = 'json'
     end
     result = JSON.parse(response.body, symbolize_names: true)[:stores][0]
+    result[:split_hours] = result[:hours].split("\; ")
+    return result 
   end
 
 end
