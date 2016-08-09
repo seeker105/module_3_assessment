@@ -21,7 +21,6 @@ class BestBuyService
     end
     result = JSON.parse(response.body, symbolize_names: true)[:stores][0]
     result[:split] = result[:hours].split("\; ")
-    result[:split_hours]=result[:hours].gsub("\;", ",").split(", ")
     return result
   end
 
